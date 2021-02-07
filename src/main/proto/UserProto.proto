@@ -1,0 +1,29 @@
+syntax ="proto3";
+
+package  usersproto;
+
+option java_package = "com.grpc.usersproto";
+option java_outer_classname = "UserProto";
+option java_multiple_files = true;
+
+service UserService {
+  rpc postUser(UserPostReq) returns (UserPostRes) ;
+  rpc getUser(UserGetReq) returns (UserGetRes) ;
+}
+message UserPostReq{
+  String userName=1;
+  String userPhoneNo=2;
+  String userBalance=3;
+}
+message UserPostRes{
+  string userMsg=1;
+}
+message UserGetReq{
+  String id=1;
+}
+message UserGetRes{
+  String id=1;
+  String userName=2;
+  String userPhoneNo=3;
+  String userBalance=4;
+}
