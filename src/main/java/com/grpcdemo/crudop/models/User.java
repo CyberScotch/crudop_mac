@@ -6,12 +6,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
-import javax.persistence.Entity;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@DynamoDBTable(tableName="user")
+@DynamoDBTable(tableName="userinfo")
 public class User {
 
         @DynamoDBHashKey
